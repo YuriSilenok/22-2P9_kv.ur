@@ -6,7 +6,7 @@ def kv_ur(a, b, c):
     if a == 0 and b == 0 and c == 0:
         return "Прямая совпадает с осью Ox", "R"
 
-    if a == 0 and b == 0 and c != 0:
+    if a == 0 and b == 0 and c == 0:
         return "Прямая параллельна оси Ox", "Корней нет"
 
     if a == 0:
