@@ -20,14 +20,3 @@ def kv_ur(a, b, c):
         x = -b / (2 * a)
         return "Один корень", x
     return "Комплексные корни", "Нет вещественных решений"
-
-
-if __name__ == "__main__":
-    try:
-        A = float(input("Введите a: "))
-        B = float(input("Введите b: "))
-        C = float(input("Введите c: "))
-        res = kv_ur(A, B, C)
-        print(res)
-    except ValueError:
-        print("Ошибка, введите корректные числовые значения!!!")
