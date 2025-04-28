@@ -15,8 +15,7 @@ class Testkvur(unittest.TestCase):
         responce = ('Квадратное уравнение. Дискриминант меньше 0. '
                     'Уравнение не имеет корней', 'Корней нет')
         result = kv_ur(9, -6, 2)
-        d = -6**2 - 4 * 9 * 2
         self.assertEqual(len(result), 3)
         self.assertEqual(result[0], responce[0])
-        self.assertEqual(result[1], d)
-        self.assertEqual(result[2], responce[2])
+        self.assertEqual(result[1], -36)
+        self.assertEqual(result[2], responce[1])
