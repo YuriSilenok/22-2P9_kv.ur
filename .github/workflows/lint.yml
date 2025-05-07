@@ -43,5 +43,5 @@ jobs:
       run: sudo apt-get install tidy
 
     - name: Check HTML with tidy
-      run: tidy -qe **/*.html
+      run: find . -name "*.html" -print0 | xargs -0 -n 1 tidy -qe || exit 1
 
