@@ -33,3 +33,16 @@ class Testkvur(unittest.TestCase):
         )
         self.assertEqual(result[1], 0)
         self.assertEqual(result[2], -1)
+
+
+    def test_greaterthanzero(self):
+        """Автотест для нахождения квадратного уравнения
+        с положительным дискриминантом"""
+        responce = ('Квадратное уравнение. Дискриминант больше 0. '
+                    'Уравнение имеет два корня.')
+        result = kv_ur(1, -3, 2)
+        self.assertEqual(len(result), 4)
+        self.assertEqual(result[0], responce[0])
+        self.assertEqual(result[1], 1)
+        self.assertEqual(result[2], 1)
+        self.assertEqual(result[3], 2)
