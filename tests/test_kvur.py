@@ -28,8 +28,8 @@ class Testkvur(unittest.TestCase):
         self.assertEqual(len(result), 3)
         self.assertEqual(
             result[0],
-            'Квадратное уравнение. Дискриминант больше 0. '
-            'Уравнение имеет два корня.'
+            'Квадратное уравнение. Дискриминант равен 0. '
+            'Уравнение имеет один корень.'
         )
         self.assertEqual(result[1], 0)
         self.assertEqual(result[2], -1)
