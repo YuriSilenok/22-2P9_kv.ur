@@ -1,4 +1,4 @@
-"""Автотест для нахожденеия квадратного уравнения
+"""Автотест для нахожденеия квадратного уравнения\
 с отрицательным дискриминантом"""
 
 
@@ -33,7 +33,6 @@ class Testkvur(unittest.TestCase):
         )
         self.assertEqual(result[1], 0)
         self.assertEqual(result[2], -1)
-
 
     def test_greaterthanzero(self):
         """Автотест для нахождения квадратного уравнения
