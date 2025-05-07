@@ -15,10 +15,12 @@ class Table(Model):
 class Kvur(Table):
     """Класс kvur"""
 
+
     a = IntegerField()
     b = IntegerField()
     c = IntegerField()
     result = IntegerField()
+
 
 if __name__ == "__main__":
     db.create_tables([Kvur])
