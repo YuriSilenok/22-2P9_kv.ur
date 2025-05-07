@@ -10,7 +10,15 @@ class Kvur(tk.Tk):
         super().__init__()
         self.title("Калькулятор для решения квадратного уравнения")
         self.geometry("500x500")
+        self.init_input()
+        self.button = tk.Button(self,
+                                text="Рассчитать",
+                                font=("Arial, 16"),
+                                command=self.calculate)
+        self.button.grid(row=4, column=2)
 
+    def init_input(self):
+        """Инициилизация атрибутов"""
         self.label_a = tk.Label(self, text="a", font=("Arial", 16))
         self.label_a.grid(row=0, column=0)
 
@@ -31,15 +39,9 @@ class Kvur(tk.Tk):
 
         self.label = tk.Label(self, text="Результат", font=("Arial", 16))
         self.label.grid(row=1, column=2)
-
+        
         self.response = tk.Label(self, text="", font=("Arial", 16))
         self.response.grid(row=1, column=3)
-
-        self.button = tk.Button(self,
-                                text="Рассчитать",
-                                font=("Arial, 16"),
-                                command=self.calculate)
-        self.button.grid(row=4, column=2)
 
     def calculate(self):
         """Метод для решения уравнения"""
