@@ -12,9 +12,9 @@ class Table(Model):
         """Класс Meta с настройками модели"""
         database = db
 
+
 class Kvur(Table):
     """Класс kvur"""
-
 
     a = IntegerField()
     b = IntegerField()
