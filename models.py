@@ -1,5 +1,6 @@
 """Модель базы данных"""
 from peewee import Model, IntegerField, SqliteDatabase
+# pylint: disable=R0903
 
 
 db = SqliteDatabase("base.db")
