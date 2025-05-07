@@ -44,3 +44,16 @@ class Testkvur(unittest.TestCase):
         self.assertEqual(result[1], 49)
         self.assertEqual(result[2], 0.5)
         self.assertEqual(result[3], 4)
+        
+    def test_a0_bnot0(self):
+        """Автотест для написания линейного уравнения
+        при a=0, b!=0"""
+
+        result = kv_ur(0, 2, 2)
+        self.assertEqual(len(result), 2)
+        self.assertEqual(
+            result[0],
+            'Линейное уравнение. Прямая пересекает ось Ox. '
+            'Уравнение имеет один корень.'
+        )
+        self.assertEqual(result[1], -1)
