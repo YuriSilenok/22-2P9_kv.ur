@@ -34,7 +34,7 @@ class Testkvur(unittest.TestCase):
         self.assertEqual(result[1], 0)
         self.assertEqual(result[2], -1)
 
-    def test_qa(self):
+    def test_a0_bnot0(self):
         """Автотест для написания линейного уравнения
         при a=0, b!=0"""
 
