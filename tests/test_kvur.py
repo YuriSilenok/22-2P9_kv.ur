@@ -68,4 +68,4 @@ class Testkvur(unittest.TestCase):
             'Линейное уравнение. Прямая параллельна оси Ох. '
             'Уравнение не имеет корней.', 'Нет корней'
         )
-        self.assertEqual(result[1], -1)
+        self.assertEqual(result[1], 'Нет корней')
