@@ -1,5 +1,4 @@
-"""Автотест для нахожденеия квадратного уравнения
-с отрицательным дискриминантом"""
+"""Автотесты функции для нахождения квадратного уравнения"""
 
 
 import unittest
@@ -7,8 +6,8 @@ from logic import kv_ur
 
 
 class Testkvur(unittest.TestCase):
-    """Автотест для нахожденеия квадратного уравнения
-    с отрицательным дискриминантом"""
+    """Автотесты функции для нахождения квадратного уравнения"""
+
     def test_lessthanzero(self):
         """Автотест для нахожденеия квадратного уравнения
         с отрицательным дискриминантом"""
@@ -33,6 +32,18 @@ class Testkvur(unittest.TestCase):
         )
         self.assertEqual(result[1], 0)
         self.assertEqual(result[2], -1)
+
+    def test_greaterthanzero(self):
+        """Автотест для нахождения квадратного уравнения
+        с положительным дискриминантом"""
+        responce = ('Квадратное уравнение. Дискриминант больше 0. '
+                    'Уравнение имеет два корня.')
+        result = kv_ur(2, -9, 4)
+        self.assertEqual(len(result), 4)
+        self.assertEqual(result[0], responce)
+        self.assertEqual(result[1], 49)
+        self.assertEqual(result[2], 0.5)
+        self.assertEqual(result[3], 4)
 
     def test_a0_bnot0(self):
         """Автотест для написания линейного уравнения
